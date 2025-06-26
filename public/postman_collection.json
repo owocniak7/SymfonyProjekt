@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "Expense Tracker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"test@123.com\",\"haslo\":\"test123\"}"
+        },
+        "url": { "raw": "http://localhost:8000/api/login", "host": ["localhost"], "port": "8000", "path": ["api", "login"] }
+      }
+    },
+    {
+      "name": "List Expenses",
+      "request": {
+        "method": "GET",
+        "header": [ { "key": "Authorization", "value": "Bearer {{jwt}}" } ],
+        "url": { "raw": "http://localhost:8000/api/expenses", "host": ["localhost"], "port": "8000", "path": ["api", "expenses"] }
+      }
+    },
+    {
+      "name": "Add Expense",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\":45.50,\"category\":\"Food\",\"date\":\"2024-12-10\"}"
+        },
+        "url": { "raw": "http://localhost:8000/api/expenses", "host": ["localhost"], "port": "8000", "path": ["api", "expenses"] }
+      }
+    }
+  ]
+}
