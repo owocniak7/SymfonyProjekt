@@ -14,16 +14,16 @@ php bin/console doctrine:fixtures:load
 symfony server:start
 ```
 
-## Demo user
+## Test user
 - **Email**: test@123.com
 - **Password**: test123
 
 ## API endpoints
-| Method | URL            | Description       |
+| Method | URL            | Opis       |
 |--------|----------------|-------------------|
-| POST   | /api/login     | Log in (JWT)      |
-| GET    | /api/expenses  | List expenses     |
-| POST   | /api/expenses  | Add new expense   |
+| POST   | /api/login     | Logowanie (JWT)   |
+| GET    | /api/expenses  | Listowanie        |
+| POST   | /api/expenses  | Dodawanie wydatku |
 
 ## Postman
 Importuj plik `postman_collection.json` i użyj danych testowtych
